@@ -18,3 +18,5 @@ Sonra uyarı baloncuğumuz oluşturuyoruz.
     );
 
 İlk parametre göstereceğimiz mesaj parametresi, ikinci parametre css tarafında tanımdaığımız stil parametresi (daha fazla stil tanımlayabiliriz.) ve üçüncü parametre de zaman parametresi. Belirlenmiş zaman yoksa uyarı baloncuğu sadece üzerine tıklanarak kapatılabilir.
+
+![Preview](preview.gif)
