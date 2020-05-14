@@ -5,7 +5,7 @@ class Alert {
     this.alert = alert;
   }
 
-  create(message, style, duration) {
+  create(message, style, duration = null) {
     let p = document.createElement('p');
     p.innerText = message;
     this.alert.classList = style;
@@ -13,29 +13,28 @@ class Alert {
     document.body.appendChild(this.alert);
 
     this.alert.addEventListener('click', () => {
-      this.alert.style.opacity = '0';
-      setTimeout(() => {
-        this.alert.remove();
-      }, 1500);
+      this.delete();
     });
 
-    setTimeout(() => {
-      this.alert.style.opacity = '0';
+    if (duration != null) {
       setTimeout(() => {
-        this.alert.remove();
-      }, 1500);
-    }, duration);
+        this.delete();
+      }, duration);
+    }
+  }
+
+  delete() {
+    this.alert.style.opacity = '0';
+    setTimeout(() => {
+      this.alert.remove();
+    }, 1500);
   }
 }
 
 // Usage
-let new_alert = new Alert();
+const alert = new Alert();
 
 setTimeout(() => {
   // Create Alert
-  new_alert.create(
-    'How quickly daft jumping zebras vex. Alert Link.',
-    'error',
-    7000
-  );
+  alert.create('How quickly daft jumping zebras vex. Alert Link.', 'error');
 }, 2500);
