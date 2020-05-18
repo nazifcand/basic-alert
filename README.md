@@ -11,12 +11,20 @@ Css dosyamızı ve javascript dosyamızı sayfaya dahil ettikten sonra;
 
 Sonra uyarı baloncuğumuz oluşturuyoruz.
 
-    alert.create(
-      'How quickly daft jumping zebras vex. Alert Link.',
-      'error',
-      7000
-    );
+    alert.create({
+    message: 'www.google.com adresine git.',
+    type: 'info',
+    duration: 4000,
+    position: {
+      top: '40px',
+      left: '50px',
+    },
+    click: () => {
+      window.location.href = 'http://www.google.com';
+    },
 
-İlk parametre göstereceğimiz mesaj parametresi, ikinci parametre css tarafında tanımdaığımız stil parametresi (daha fazla stil tanımlayabiliriz.) ve üçüncü parametre de zaman parametresi. Belirlenmiş zaman yoksa uyarı baloncuğu sadece üzerine tıklanarak kapatılabilir.
+});
+
+create methodu artık parametre olarak obje alıyor. Bu obje ile mesaj içeriği, uyarı tipi, ekranda kalma süresi, pozisyon ve tıklanma olayını içeriyor.
 
 ![Preview](preview.gif)

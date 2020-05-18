@@ -23,8 +23,6 @@ body .message {
   justify-content: center;
   position: fixed;
   padding: 10px 15px;
-  top: 20px;
-  right: 20px;
   border-radius: 3px;
   background-color: #6f52ed;
   box-shadow: 0 0 15px rgba(39, 49, 61, 0.3);
